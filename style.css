@@ -1,106 +1,93 @@
 
-  html,
-  body {
-    height: 100%;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
-      sans-serif, Apple Color Emoji, Segoe UI Emoji;
-    margin: 0;
-  }
-  
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url("bg.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: 5px;
-  }
-  
-  input[type="color"] {
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-  }
-  
-  input[type="text"] {
-    height: 50px;
-    width: 100%;
-    padding: 0 10px;
-    border: 0;
-  }
-  
-  .color-input-container {
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
-    margin-right: 20px;
-    transition: 0.3s;
-    flex-shrink: 0;
-  }
-  
-  .text-input-container {
-    width: 100%;
-    border: 1px solid #f3f3f3;
-  }
-  
-  .color-inputs {
-    display: flex;
-    padding: 20px;
-  }
-  
+html,
+body {
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("bg.svg");
+  background-size: cover;
+  margin: 0;
+  background-repeat: no-repeat;
+}
+
+input[type="color"] {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+input[type="text"] {
+  height: 45px;
+  width: 100%;
+  color: #ffffff;
+  border-color: #ffffff31;
+  padding-left: 10px;
+  border-radius: 7px;
+  background-color: transparent;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.color-input-container {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  margin-right: 20px;
+  transition: 0.3s;
+  flex-shrink: 0;
+  outline: none;
+}
+
+.color-inputs {
+  display: flex;
+  padding: 20px;
+}
+
+.main-container {
+  width: 100%;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.12);
+  margin: 5px;
+}
+
+@media only screen and (min-width: 641px) {
   .main-container {
-    width: 100%;
-    max-width: unset;
-    backdrop-filter: blur(10px);
-    border-radius: 10px;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.12);
+    max-width: 600px;
   }
-  
-  @media only screen and (min-width: 641px) {
-    .main-container {
-      max-width: 550px;
-    }
-  }
+}
 
-  .display-container {
-    background: linear-gradient(
-      90deg,
-      rgb(8, 85, 123),
-      rgb(8, 101, 140),
-      rgb(8, 85, 123)
-    );
-    padding: 30px;
-    margin-inline: 10px;
-    text-align: center;
-    font-size: 40px;
-    font-weight: bold;
-    border-radius: 10px;
-  }
-  
-  .output-container {
-    text-align: center;
-    padding: 20px;
-    font-size: 12px;
-    color: #ffffff;
-    font-family: monospace;
-  }
+.display-container {
+  background: linear-gradient(
+    90deg,
+    rgb(8, 85, 123),
+    rgb(8, 101, 140),
+    rgb(8, 85, 123)
+  );
+  padding: 30px;
+  margin-inline: 10px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  border-radius: 10px;
+}
 
-  .text-input-container {
-    border-radius: 7px;
-    border-color: rgba(255, 255, 255, 0.6);
-  }
+.output-container {
+  text-align: center;
+  padding: 20px;
+  font-size: 12px;
+  color: #ffffff;
+  font-family: monospace;
+}
 
-  .text-input-container :focus {
-    border-radius: 7px;
-    box-shadow: 0 3px 5px rgba(255, 255, 255, 0.7);
-    transition: box-shadow 0.3s ease-in-out;
-  }
-  
-  .js-textInput {
-    border: none;
-    outline: none;
-    font-size: 16px;
-    color: #ffffff;
-    background: transparent;
-  } 
+.text-input-container :focus {
+  outline: none;
+  border-radius: 7px;
+  box-shadow: 0 3px rgba(255, 255, 255, 0.7);
+  transition: box-shadow 0.3s ease-in-out;
+}
